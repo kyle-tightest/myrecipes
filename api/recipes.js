@@ -2,6 +2,7 @@ let recipes = [];
 let nextId = 1;
 
 export default function handler(req, res) {
+  console.log(`Received ${req.method} request at /api/recipes`);
   if (req.method === 'GET') {
     res.status(200).json(recipes);
   } else if (req.method === 'POST') {
